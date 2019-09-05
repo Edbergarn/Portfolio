@@ -10,55 +10,105 @@
     <link rel="stylesheet" href="style.css">
     <script src='main.js'></script>
 </head>
-<body>
-    <nav class=" container col-8 navbar navbar-expand-lg navbar-light mainColor">
-        <a class="navbar-brand" href="#">Portfolio</a>
+<body class="container col-lg-8 p-0">
+    <nav class="navbar navbar-expand-lg navbar-light mainColor"><!--Navbar-->
+        <a class="navbar-brand" href="#">Portfoleyo</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active" hidden>
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item active">
+                <button type="button" class="btn btn-outline-dark my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal">
+                    Info
+                    </button>              
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Emil Edberg</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Kön: Man</p>
+                            <p>Ålder: 19</p>
+                            <p>Ort: Umeå</p>
+                            <p>Titel: Sopa</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-dismiss="modal">Stäng</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
             </li>
           </ul>
             <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Logga in</button>
         </div>
     </nav>
-    <div>
+
+    <div ><!--Name and line-->
         <h1 class="text-center">Emil Edberg</h1>
-        <div id="CL" class="container rounded col-8 bg-dark "></div>
+        <div id="CL" class="rounded bg-dark "></div>
     </div>
-    <div class="container col-8 mt-3"> <!--Where I display projekts-->
-        <div class="row">
-            <div class="card col-4">
+    <div class="container-fluid mt-3"> <!--Where I display projects-->
+        <div class="row d-flex">
+            <div class="card col-lg-4 pt-3 px-0">
                 <img class="card-img-top" src="bth.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Bildterapihuset</h5>
                     <p class="card-text">En hemsida skapad med NodeJS Express. Uppdraget var att skapa en ny design med samma innehåll som deras föregående sida.</p>
-                    <a href="https://bildterapihuset.herokuapp.com/" class="btn mainColor">Besök hemsida</a>
-                </div>            
+                </div>
+                <div class="card-footer">
+                    <a target="_" href="https://bildterapihuset.herokuapp.com/" class="btn mainColor">Besök hemsida</a>
+                    <a target="_" href="https://github.com/Edbergarn/BTH" class="btn bg-dark text-white">Besök Git-Repo</a>
+                </div>         
             </div>
-            <div class="card col-4">
+            <div class="card col-lg-4 pt-3 px-0">
                 <img class="card-img-top" src="bth.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Monsterfighten</h5>
+                <div class="card-body" style="height: 100%">
+                    <h5 class="card-title">Monsterfighten - Hemsida</h5>
                     <p class="card-text">En hemsida skapad med Laravel. Mitt slutprojekt där jag gjorde en hemsida med Stats från ett spel jag gjort på programmeringen.</p>
-                    <a href="https://monsterfighten.herokuapp.com/" class="btn mainColor">Besök hemsida</a>
-                </div>            
+                </div>
+                <div class="card-footer">
+                    <a target="_" href="https://monsterfighten.herokuapp.com/" class="btn mainColor">Besök hemsida</a>
+                    <a target="_" href="https://github.com/Edbergarn/BTH" class="btn bg-dark text-white">Besök Git-Repo</a>
+                </div>
+                          
             </div>
-            <div class="card col-4">
+            <div class="card col-lg-4 pt-3 px-0">
                 <img class="card-img-top" src="bth.png" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">Bildterapihuset</h5>
-                    <p class="card-text">En hemsida skapad med NodeJS Express. Uppdraget var att skapa en ny design med samma innehåll som deras föregående sida.</p>
-                    <a href="https://bildterapihuset.herokuapp.com/" class="btn mainColor">Besök hemsida</a>
+                    <h5 class="card-title">Monsterfighten - Spel</h5>
+                    <p class="card-text">En hemsida skapad med NodeJS Express. Uppdraget var att skapa en ny design med samma innehåll som deras föregående sida. En hemsida skapad med NodeJS Express. Uppdraget var att skapa en ny design med samma innehåll som deras föregående sida.</p>
+                </div>
+                <div class="card-footer">
+                    <a target="_" href="https://bildterapihuset.herokuapp.com/" class="btn mainColor" hidden>Besök hemsida</a>
+                    <a target="_" href="https://github.com/Edbergarn/Slutprojekt" class="btn bg-dark text-white">Besök Git-Repo</a>
                 </div>            
+        </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-white mt-3 px-0">
+            <div class="container">
+                <h2 class="text-center">Kontakt</h2>
+                <div class="row">
+                    <p class="col-md-4">
+                      Emil Edberg
+                    </p>
+                    <p class="col-md-4">07039022XX</p>
+                    <p class="col-md-4">emil.edberg@elev.ga.ntig.se</p>        
+                </div>
+                
             </div>
-        </div>
-        </div>
+        </footer>
 </body>
+
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
