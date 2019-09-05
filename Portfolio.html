@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="style.css">
     <script src='main.js'></script>
 </head>
-<body class="container col-lg-8 p-0">
-    <nav class="navbar navbar-expand-lg navbar-light mainColor"><!--Navbar-->
+<body class="container col-lg-9 p-0">
+    <nav class="navbar navbar-expand-lg navbar-light mainColor sticky-top"><!--Navbar-->
         <a class="navbar-brand" href="#">Portfoleyo</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,7 @@
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                        <div class="modal-header">
+                        <div class="modal-header mainColor">
                             <h5 class="modal-title" id="exampleModalLabel">Emil Edberg</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -53,9 +53,9 @@
 
     <div ><!--Name and line-->
         <h1 class="text-center">Emil Edberg</h1>
-        <div id="CL" class="rounded bg-dark "></div>
+        <div id="CL" class="rounded bg-dark container col-12"></div>
     </div>
-    <div class="container-fluid mt-3"> <!--Where I display projects-->
+    <div class="container-fluid mt-3 "> <!--Where I display projects-->
         <div class="row d-flex">
             <div class="card col-lg-4 pt-3 px-0">
                 <img class="card-img-top" src="bth.png" alt="Card image cap">
@@ -90,7 +90,18 @@
                     <a target="_" href="https://bildterapihuset.herokuapp.com/" class="btn mainColor" hidden>Besök hemsida</a>
                     <a target="_" href="https://github.com/Edbergarn/Slutprojekt" class="btn bg-dark text-white">Besök Git-Repo</a>
                 </div>            
-        </div>
+            </div>
+            <div class="card col-lg-4 pt-3 px-0">
+                <img class="card-img-top" src="bth.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Bildterapihuset</h5>
+                    <p class="card-text">En hemsida skapad med NodeJS Express. Uppdraget var att skapa en ny design med samma innehåll som deras föregående sida.</p>
+                </div>
+                <div class="card-footer">
+                    <a target="_" href="https://bildterapihuset.herokuapp.com/" class="btn mainColor">Besök hemsida</a>
+                    <a target="_" href="https://github.com/Edbergarn/BTH" class="btn bg-dark text-white">Besök Git-Repo</a>
+                </div>         
+            </div>
         </div>
     </div>
     <footer class="bg-dark text-white mt-3 px-0">

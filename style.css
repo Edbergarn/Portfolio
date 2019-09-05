@@ -1,10 +1,16 @@
 .mainColor{
-    background-color: #FF5A5A;
-    border-color: #FF5A5A;
+    background-color: #FCA265;
+    border-color: #FCA265;
 }
 #CL{
     height: 1vh;
 }
 .btn{
     margin-top: 1vh;
+}
+html{
+    background-image: url("portfolioBg.png");
+}
+h1{
+    font-size: 4em;
 }
