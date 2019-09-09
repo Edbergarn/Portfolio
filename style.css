@@ -1,3 +1,4 @@
+
 .mainColor{
     background-color: #FCA265;
     border-color: #FCA265;
@@ -8,9 +9,14 @@
 .btn{
     margin-top: 1vh;
 }
-html{
-    background-image: url("portfolioBg.png");
-}
 h1{
     font-size: 4em;
+}
+a{
+    color: black;
+    font-size: 1.25rem;
+}
+.info:hover{
+    text-decoration: underline;
+    color: black;
 }
