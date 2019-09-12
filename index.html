@@ -14,20 +14,40 @@
         <!-- Styles -->
     </head>
     <body class="">
-        <div class="container-fluid col-12 col-lg-9 bg-white p-0">
+        <div class="container-fluid col-12 col-lg-9 bg-white p-0 shadow">
             <div>
-                <nav class="navbar navbar-expand-lg col-12 navbar-light mainColor sticky-top"><!--Navbar-->
-                    <a class="navbar-brand" href="#">Emil Edberg</a>
+                <nav class="navbar navbar-expand-lg col-12 navbar-light mainColor px-4"><!--Navbar-->
+                    <a class="navbar-brand font-weight-bold" href="#">Emil Edberg</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                      <span class="navbar-toggler-icon"></span>
                     </button>
+                  
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a href="" class="info my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal">Info</a>           
-                            </li>
-                        </ul>
-                        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" hidden>Logga in</button>
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a href="" class="info my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal">Info</a>           
+                        </li>
+                      </ul>
+                      <div class="dropdown">
+                        <button class="btn btn-outline-dark my-2 my-sm-0 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Logga in</button>
+                        <div class="dropdown-menu dropdown-menu-right bg-dark text-light border" aria-labelledby="dropdownMenuButton">
+                            <form method="POST" action="/login" class="px-2">
+                                <label for="username">Username</label>
+                                <input type="text" name="username" id="username">
+                                <label for="pw">Password</label>
+                                <input type="password" name="pw" id="pw">
+                                <input type="submit" value="Logga in" class="mt-1">
+                            </form>
+                            <hr style="background-color:white;">
+                            <form method="POST" action="/userCreate" class="px-2">
+                                <label for="newUsername">Username</label>
+                                <input type="text" name="newUsername" id="newUsername">
+                                <label for="newPw">Password</label>
+                                <input type="newPassword" name="newPw" id="newPw">
+                                <input type="submit" value="Skapa användare" class="mt-1">
+                            </form>
+                        </div>
+                    </div>
                     </div>
                 </nav>
             </div>
@@ -38,54 +58,52 @@
   <!--<div id="CL" class="rounded bg-dark container col-12"></div> -->
 </div>
 
-<section class="container-fluid mt-3 bg-white"> <!--Where I display projects-->
-  <div class="row d-flex">
-      <div class="card col-lg-4 pt-3 px-0 mb-3">
-          <img class="card-img-top" src="bth.PNG" alt="Card image cap">
-          <div class="card-body">
-              <h5 class="card-title">Bildterapihuset</h5>
-              <p class="card-text">En hemsida skapad med NodeJS Express. Uppdraget var att skapa en ny design med samma innehåll som deras föregående sida.</p>
-          </div>
-          <div class="card-footer">
-              <a target="blank" href="https://bildterapihuset.herokuapp.com/" class="btn mainColor">Besök hemsida</a>
-              <a target="blank" href="https://github.com/Edbergarn/BTH" class="btn bg-dark text-white">Besök Git-Repo</a>
-          </div>         
-      </div>
-      <div class="card col-lg-4 pt-3 px-0 mb-3">
-          <img class="card-img-top" src="monsterfighten.png" alt="Card image cap">
-          <div class="card-body" style="height: 100%">
-              <h5 class="card-title">Monsterfighten - Hemsida</h5>
-              <p class="card-text">En hemsida skapad med Laravel. Mitt slutprojekt där jag gjorde en hemsida med Stats från ett spel jag gjort på programmeringen.</p>
-          </div>
-          <div class="card-footer">
-              <a target="blank" href="https://monsterfighten.herokuapp.com/" class="btn mainColor">Besök hemsida</a>
-              <a target="blank" href="https://github.com/Edbergarn/BTH" class="btn bg-dark text-white">Besök Git-Repo</a>
-          </div>
-                    
-      </div>
-      <div class="card col-lg-4 pt-3 px-0 mb-3">
-          <img class="card-img-top" src="javac.png" alt="Card image cap">
-          <div class="card-body">
-              <h5 class="card-title">Monsterfighten - Spel</h5>
-              <p class="card-text">Ett terminalspel gjort i Java. Spelet går ut på att ta sig vidare till nästa rum genom att slåss mot monster, för att ta sig långt krävs ett taktiskt användande av vapen, portions och armor samt många tryckningar på Enter.</p>
-          </div>
-          <div class="card-footer">
-              <a target="blank" href="https://bildterapihuset.herokuapp.com/" class="btn mainColor" hidden>Besök hemsida</a>
-              <a target="blank" href="https://github.com/Edbergarn/Slutprojekt" class="btn bg-dark text-white">Besök Git-Repo</a>
-          </div>            
-      </div>
-      <div class="card col-lg-4 pt-3 px-0 mb-3">
-          <img class="card-img-top" src="p.PNG" alt="Card image cap">
-          <div class="card-body">
-              <h5 class="card-title">Portfoleyo</h5>
-              <p class="card-text">En hemsida skapad med NodeJS Express. Uppdraget var att skapa en ny design med samma innehåll som deras föregående sida.</p>
-          </div>
-          <div class="card-footer">
-              <a target="blank" href="https://bildterapihuset.herokuapp.com/" class="btn mainColor">Besök hemsida</a>
-              <a target="blank" href="https://github.com/Edbergarn/BTH" class="btn bg-dark text-white">Besök Git-Repo</a>
-          </div>         
-      </div>
-  </div>
+<section class="container-fluid d-flex flex-wrap mt-3 bg-white px-4"> <!--Where I display projects-->
+    <div class="card col-lg-4 pt-3 px-0 mb-3">
+        <img class="card-img-top" src="/images/bth.PNG" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Bildterapihuset</h5>
+            <p class="card-text">En hemsida skapad med NodeJS Express. Uppdraget var att skapa en ny design med samma innehåll som deras föregående sida.</p>
+        </div>
+        <div class="card-footer">
+            <a target="blank" href="https://bildterapihuset.herokuapp.com/" class="btn mainColor">Besök hemsida</a>
+            <a target="blank" href="https://github.com/Edbergarn/BTH" class="btn bg-dark text-white">Besök Git-Repo</a>
+        </div>         
+    </div>
+    <div class="card col-lg-4 pt-3 px-0 mb-3">
+        <img class="card-img-top" src="/images/monsterfighten.PNG" alt="Card image cap">
+        <div class="card-body" style="height: 100%">
+            <h5 class="card-title">Monsterfighten - Hemsida</h5>
+            <p class="card-text">En hemsida skapad med Laravel. Mitt slutprojekt där jag gjorde en hemsida med Stats från ett spel jag gjort på programmeringen.</p>
+        </div>
+        <div class="card-footer">
+            <a target="blank" href="https://monsterfighten.herokuapp.com/" class="btn mainColor">Besök hemsida</a>
+            <a target="blank" href="https://github.com/Edbergarn/BTH" class="btn bg-dark text-white">Besök Git-Repo</a>
+        </div>
+                  
+    </div>
+    <div class="card col-lg-4 pt-3 px-0 mb-3">
+        <img class="card-img-top" src="/images/javac.PNG" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Monsterfighten - Spel</h5>
+            <p class="card-text">Ett terminalspel gjort i Java. Spelet går ut på att ta sig vidare till nästa rum genom att slåss mot monster, för att ta sig långt krävs ett taktiskt användande av vapen, portions och armor samt många tryckningar på Enter.</p>
+        </div>
+        <div class="card-footer">
+            <a target="blank" href="https://bildterapihuset.herokuapp.com/" class="btn mainColor" hidden>Besök hemsida</a>
+            <a target="blank" href="https://github.com/Edbergarn/Slutprojekt" class="btn bg-dark text-white">Besök Git-Repo</a>
+        </div>            
+    </div>
+    <div class="card col-lg-4 pt-3 px-0 mb-4">
+        <img class="card-img-top" src="/images/p.PNG" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Portfoleyo</h5>
+            <p class="card-text">En hemsida skapad med NodeJS Express. Uppdraget var att skapa en ny design med samma innehåll som deras föregående sida.</p>
+        </div>
+        <div class="card-footer">
+            <a target="blank" href="localhost:8000/" class="btn mainColor">Besök hemsida</a>
+            <a target="blank" href="https://github.com/Edbergarn/portfolio" class="btn bg-dark text-white">Besök Git-Repo</a>
+        </div>         
+    </div>
 </section> 
                 </div>
                 <div> 
